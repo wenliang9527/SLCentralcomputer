@@ -10,14 +10,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "at32f4xx_it.h"
-#include "ExternComm.h"
-#include "PMS7003.h"
-#include "FST_DCI.h"
-#include "CoreProcessor.h"
-#include "Sensor.h"
 
-
-u8 adtime05mm;
 
 
 void TimingDelay_Decrement(void);
@@ -209,13 +202,7 @@ void TMR1_TRG_COM_TMR11_IRQHandler(void)
   if(TMR_GetINTStatus(TMR11, TMR_INT_Overflow) != RESET)
   {
     
-		 adtime05mm++;
-		 if(adtime05mm>=2)
-		 {
-			 adtime05mm=0;
-			 it_CoreProcessor1ms();
-			 it_ADC1ms();
-		 }
+
 		 TMR_ClearITPendingBit(TMR11, TMR_INT_Overflow);
   }
   TMR_ClearFlag(TMR11, TMR_FLAG_Update);
@@ -242,39 +229,39 @@ void TMR8_TRG_COM_TMR14_IRQHandler(void)
 
 void USART1_IRQHandler(void)
 {
- USART1_Usbat();
+
 }
 void USART2_IRQHandler(void) 
 {
- Usart2_ScreenTxdRxd();       // 接串口显示屏
+
 }
 void USART3_IRQHandler(void)
 {
-  USART3_STM32F103();         //从控SAM32F103RCT6
+
 }
 void UART4_IRQHandler(void)
 {
-  Usart4_dn232();            // 主板与中位机通讯
+
 }
 
 void UART5_IRQHandler(void)
 {
-  USART5_PC232();           //pc_232 计算机
+
 }
 
 void USART6_IRQHandler(void)
 {
- Usart6_Rs485TRd();
+
 }
 
 void UART7_IRQHandler(void)//485
 {
- Usart7_Rs485TRd();          //pc_232 计算机
+
 }
 
 void UART8_IRQHandler(void)
 {
-  USART8_579TR();          //579网口
+
 }
 
 

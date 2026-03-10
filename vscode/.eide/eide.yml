@@ -1,0 +1,214 @@
+version: "4.1"
+name: CentralComputer
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: StartUp
+      files:
+        - path: ../../MYLibrary/AT32F4_Libraries/CMSIS/CM4/DeviceSupport/system_at32f4xx.c
+        - path: ../../MYLibrary/AT32F4_Libraries/CMSIS/CM4/DeviceSupport/startup/mdk/startup_at32f403avgt7.s
+      folders: []
+    - name: Libraries
+      files:
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_acc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_adc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_bkp.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_can.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_comp.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_crc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_dac.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_dbgmcu.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_dma.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_ertc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_eth.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_exti.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_flash.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_gpio.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_gpio_ex.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_i2c.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_iwdg.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_pwr.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_rcc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_rtc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_sdio.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_spi.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_syscfg.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_tim.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_usart.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_wwdg.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/at32f4xx_xmc.c
+        - path: ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/src/misc.c
+      folders: []
+    - name: user
+      files: []
+      folders: []
+    - name: Head
+      files:
+        - path: ../uint/userint.h
+        - path: ../uint/usermain.h
+      folders: []
+    - name: umain
+      files:
+        - path: ../usrc/at32f4xx_it.c
+        - path: ../usrc/main.c
+        - path: ../usrc/usermain.c
+      folders: []
+    - name: Work
+      files:
+        - path: ../usrc/TXD_RXDcomm.c
+        - path: ../../MYLibrary/SCR/W25Q128.c
+        - path: ../../MYLibrary/SCR/DS18B20.c
+        - path: ../../MYLibrary/SCR/SofSPI.c
+        - path: ../../MYLibrary/SCR/Sensor.c
+        - path: ../../MYLibrary/SCR/TMRsetinit.c
+      folders: []
+    - name: COM
+      files:
+        - path: ../../MYLibrary/Usartinit/SLusartinit.c
+        - path: ../../MYLibrary/Usartinit/SLuserUSART.c
+        - path: ../../MYLibrary/Usartinit/USendList.c
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: c6c0d4cfe22515d458f59c18830633c5
+targets:
+  CComputer:
+    cppPreprocessAttrs:
+      defineList:
+        - AT32F403AVGT7
+        - LIBRARY_VERSION
+      incList:
+        - ../uinc
+        - ../uint
+        - ../../MYLibrary/INC
+        - ../../MYLibrary/uint
+        - ../../MYLibrary/Usartinit/init
+        - ../../MYLibrary/AT32F4_Libraries/AT32F4xx_StdPeriph_Driver/inc
+        - ../../MYLibrary/AT32F4_Libraries/CMSIS/CM4/DeviceSupport
+        - ../../MYLibrary/AT32F4_Libraries/CMSIS/CM4/CoreSupport
+        - .cmsis/include
+        - ../user/RTE/_CComputer
+      libList: []
+    excludeList: []
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            optimize-for-time: true
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: false
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x38000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+    uploader: JLink

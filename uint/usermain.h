@@ -6,7 +6,10 @@
 
 /* includes -----------------------------------------------------------------------*/
 #include "userint.h"
-
+/*-----------------------------------------------------------------------*/
+#if     INT_TMRER
+#include "TMRsetinit.h"
+#endif
 /*-----------------------------------------------------------------------*/
 #if     INT_LEDBEEP
 #include "LEDBEEP.h"
@@ -51,12 +54,10 @@
 /*-----------------------------------------------------------------------*/
 #define Queuelen  100
 
-typedef __packed union
-{
-  __packed struct {uint16_t Value;};
-  __packed struct {uint8_t LowByte, HighByte;};
-  __packed struct {uint8_t Bytes[2];};
-}TWordRec, *PWordRec;
+
+
+
+
 
 /*-----------------------------------------------------------------------*/
 

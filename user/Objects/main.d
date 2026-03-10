@@ -40,6 +40,7 @@
 .\objects\main.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: D:\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: D:\MDK5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\..\MYLibrary\INC\TMRsetinit.h
 .\objects\main.o: ..\..\MYLibrary\INC\LEDBEEP.h
 .\objects\main.o: ..\..\MYLibrary\INC\SofIIC.h
 .\objects\main.o: ..\..\MYLibrary\Usartinit\init\ATUSARTuser.h
