@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: c y, y, LIC=03C6R-KFFW5-63RMB-2781S-TQ56S-KS0YR
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.30.0.0
+Toolchain Path:  D:\MDK5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+D:\WORK_VSCODE\SLwork\SLCentralcomputer\user\CentralComputer.uvprojx
+Project File Date:  03/09/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\MDK5\ARM\ARMCC\Bin'
+Build target 'CComputer'
+compiling TXD_RXDcomm.c...
+..\usrc\TXD_RXDcomm.c(1): error:  #5: cannot open source input file "ExternComm.h": No such file or directory
+  #include "ExternComm.h"
+..\usrc\TXD_RXDcomm.c: 0 warnings, 1 error
+compiling at32f4xx_it.c...
+..\usrc\at32f4xx_it.c(13): error:  #5: cannot open source input file "ExternComm.h": No such file or directory
+  #include "ExternComm.h"
+..\usrc\at32f4xx_it.c: 0 warnings, 1 error
+compiling SLusartinit.c...
+..\..\MYLibrary\Usartinit\SLusartinit.c(1663): error:  #20: identifier "USART_INT_TDBE" is undefined
+        USART_INTConfig(UART7,USART_INT_TDBE,ENABLE);
+..\..\MYLibrary\Usartinit\SLusartinit.c: 0 warnings, 1 error
+compiling DS18B20.c...
+compiling SofSPI.c...
+compiling main.c...
+..\..\MYLibrary\INC\Sensor.h(76): warning:  #1-D: last line of file ends without a newline
+  #endif /* __SENSOR_H */
+..\usrc\main.c: 1 warning, 0 errors
+compiling SLuserUSART.c...
+compiling USendList.c...
+compiling W25Q128.c...
+compiling Sensor.c...
+..\..\MYLibrary\INC\Sensor.h(76): warning:  #1-D: last line of file ends without a newline
+  #endif /* __SENSOR_H */
+..\..\MYLibrary\SCR\Sensor.c(204): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\MYLibrary\SCR\Sensor.c: 2 warnings, 0 errors
+compiling usermain.c...
+..\..\MYLibrary\INC\Sensor.h(76): warning:  #1-D: last line of file ends without a newline
+  #endif /* __SENSOR_H */
+..\usrc\usermain.c: 1 warning, 0 errors
+".\Objects\CentralComputer.axf" - 3 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ArteryTek
+                
+                ArteryTek.AT32F403A_407_DFP.2.0.7
+                ArteryTek AT32F403A_407 Series Device Support,Drivers
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_CComputer
+  D:\MDK5\ArteryTek\AT32F403A_407_DFP\2.0.7\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
